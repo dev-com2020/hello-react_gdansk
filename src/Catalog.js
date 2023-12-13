@@ -1,6 +1,7 @@
 import React from "react";
 import "./Catalog.css";
 import obraz from "./image.png";
+import Message from "./Message";
 
 // function Catalog() {
 //     return (
@@ -19,6 +20,8 @@ class Catalog extends React.Component {
             <div>
                 <h2>{title}</h2>
                     <div><img src={obraz} alt="coś"></img></div>
+                    <br/>
+                    <Message />
             </div>
         );
     }
