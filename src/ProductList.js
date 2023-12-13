@@ -2,16 +2,20 @@ import React from "react";
 import Product from "./Product";
 
 class ProductList extends React.Component {
+    constructor() {
+        super();
+        this.state = { products: []};
+
+        fetch("product.json")
+        .then(response => response.json())
+        .then(json => {this.setState({products: json})})
+        .catch(error => console.log(error));
+
+    }
     render() {
-        let products = [
-            {code: "P01", name: "Kurs React", description: "Fajny kurs"},
-            {code: "P02", name: "Kurs Java", description: "Fajny kurs."},
-            {code: "P03", name: "Kurs Python", description: "Fajny kurs.."},
-            {code: "P04", name: "Kurs C++", description: "Fajny kurs..."},
-        ];
         let productComponents = [];
 
-        for (let product of products){
+        for (let product of this.state.products){
             productComponents.push(<Product item={product} />);
         }
         return <ul>{productComponents}</ul>;
