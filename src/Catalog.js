@@ -24,7 +24,8 @@ class Catalog extends React.Component {
     }
   
     render() {
-      return <div><h2>Wine Catalog</h2><ProductList items={this.state.products} selectHandler={this.select.bind(this)}/></div>;
+      return <div><h2>Katalog win</h2><ProductList items={this.state.products} 
+      selectHandler={this.select.bind(this)}/></div>;
     }
   }
   
