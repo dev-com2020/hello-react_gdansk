@@ -1,4 +1,5 @@
 import React from "react";
+import './Product.css';
 
 
 class Product extends React.Component {
@@ -7,14 +8,13 @@ class Product extends React.Component {
         alert("Cena winka to: " + this.props.item.price);
     }
 
-
     render() {
     
         let classToApply = this.props.item.selected? "selected": "";
 
-        return <li>
+        return <li onClick={() => this.props.selectHandler(this.props.item.code)} className={classToApply}>
             <h3 onClick={() => this.showPrice()}>{this.props.item.name}</h3>
-            <p onClick={() => this.props.selectHandler(this.props.item.code)} className={classToApply}>{this.props.item.description}</p>
+            <p>{this.props.item.description}</p>
         </li>;
     }
 }

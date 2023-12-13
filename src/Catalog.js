@@ -26,7 +26,7 @@ select(productCode){
 
     render() {
         return <div><h2>Katalog win</h2><ProductList items={this.state.products}
-        selectedHandler={this.select}/></div>
+        selectHandler={this.select}/></div>
     }
 }
 
