@@ -2,23 +2,14 @@ import React from "react";
 import Product from "./Product";
 
 class ProductList extends React.Component {
-    constructor() {
-        super();
-        this.state = { products: []};
+    render(){
+        let products = [];
 
-        fetch("product.json")
-        .then(response => response.json())
-        .then(json => {this.setState({products: json})})
-        .catch(error => console.log(error));
-
+    for (let product of this.props.items){
+        products.push(<Product item={product} selectHandler={this.props.selectHandler}/>);
     }
-    render() {
-        let productComponents = [];
+    return <ul>{products}</ul>
 
-        for (let product of this.state.products){
-            productComponents.push(<Product item={product} />);
-        }
-        return <ul>{productComponents}</ul>;
     }
 }
 export default ProductList;
