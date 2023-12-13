@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "./Product";
 
 class ProductList extends React.Component {
     render() {
@@ -11,7 +12,7 @@ class ProductList extends React.Component {
         let productComponents = [];
 
         for (let product of products){
-            productComponents.push(<Product />);
+            productComponents.push(<Product item={product} />);
         }
         return <ul>{productComponents}</ul>;
     }
