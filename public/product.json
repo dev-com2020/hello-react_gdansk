@@ -1,7 +1,7 @@
 [
     {"code":"P01", "name": "Traditional Merlot", 
     "description": "A bottle of middle weight wine, lower in tannins (smoother), with a more red-fruited flavor profile.",
-    "price": 9.5, "selected": false},
+    "price": 11, "selected": false},
     {"code":"P02", "name": "Classic Chianti", 
     "description": "A medium-bodied wine characterized by a marvelous freshness with a lingering, fruity finish",
     "price": 4.5, "selected": false},

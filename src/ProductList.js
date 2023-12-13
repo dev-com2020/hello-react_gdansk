@@ -2,15 +2,15 @@ import React from "react";
 import Product from "./Product";
 
 class ProductList extends React.Component {
-    render(){
+    render() {
         let products = [];
-
-    for (let product of this.props.items){
-        products.push(<Product item={product} 
-            selectHandler={this.props.selectHandler}/>);
+  
+        for (let product of this.props.items) {
+            products.push(<Product item={product} selectHandler={this.props.selectHandler}/>);
+        }
+  
+      return <ul>{products}</ul>;
     }
-    return <ul>{products}</ul>;
-
-    }
-}
-export default ProductList;
+  }
+  
+  export default ProductList;
